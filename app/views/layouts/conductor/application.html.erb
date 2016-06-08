@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Conductor</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Conductor: <%= @page_title %></title>
   <%= stylesheet_link_tag    "conductor/application", media: "all" %>
   <%= javascript_include_tag "conductor/application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <div class='container'>
+      
+    <nav>
+      <ul>
+        <li class='dropdown' ><a href='#'>Code</a>
+          <ul class='dropdown-content'>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+          </ul>
+        </li>
+        <li class='dropdown' ><a href='#'>Generators</a></li>
+        <li class='dropdown' ><a href='#'>Manage</a></li>
+        <li class='dropdown' ><a href='#'>Reflection</a></li>
+        <li class='dropdown' ><a href='#'>Documentation</a></li>
+        <li class='dropdown' ><a href='#'>Extensions</a></li>
+      </ul>
+    </nav>
+
+      
+    <%= image_tag 'conductor/rails-logo', alt: "Ruby on Rails", width: 220, height:78  %>
+    
+    <header>
+      <h1>Conductor: <%= @page_title %></h1>
+    </header>
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+    <%= yield %>
+
+    <footer>
+      <h2>License</h2>
+      <p>Copyright © David Heinemeier Hansson.</p>
+    </footer>
+  </div>
 
 </body>
 </html>
