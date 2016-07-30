@@ -1,8 +1,8 @@
 module Conductor
   class ApplicationController < ActionController::Base
     protect_from_forgery with: :exception
-    before_filter :ensure_local_request
-    before_filter :set_page_title
+    before_action :ensure_local_request
+    before_action :set_page_title
 
     private
       def ensure_local_request

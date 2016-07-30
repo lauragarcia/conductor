@@ -1,0 +1,21 @@
+table { border-collapse:collapse; }
+thead tr { border-bottom: 2px solid #ddd; }
+thead tr.bottom { border-bottom: none; }
+thead tr.bottom th { padding: 10px 0; line-height: 15px;}
+
+tbody.exact_matches, tbody.fuzzy_matches {
+    background-color: #fafad2;
+    border-bottom: solid 2px #708090;
+}
+tbody tr:nth-child(odd) {
+    background: #f2f2f2;
+}
+tbody tr { border-bottom: 1px solid #ddd;}
+td { padding: 4px 30px;}
+
+table {
+  font-family: helvetica, verdana, arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+}
+#route_table{ width: 80%; margin: 80px auto; }
