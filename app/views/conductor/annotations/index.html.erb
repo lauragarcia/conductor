@@ -1,0 +1,48 @@
+<h2>TODO</h2>
+<% unless @todo.empty? %>
+  <% for file in @todo.keys %>
+    <div>
+      <p><%= file %></p>
+      <ul>
+        <% for annotation in @todo[file] %>
+          <li><%= annotation.to_s(:indent => 0) %></li>
+        <% end %>
+      </ul>
+  <% end %>
+<% else %>
+  <p>There are not TODO notes to show.</p>
+<% end %>
+
+<h2>FIXME</h2>
+<% unless @fixme.empty? %>
+  <% for file in @fixme.keys %>
+    <div>
+      <p><%= file %></p>
+      <ul>
+        <% for annotation in @fixme[file] %>
+          <li><%= annotation.to_s(:indent => 0) %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% else %>
+  <p>There are not FIXME notes to show.</p>
+<% end %>
+
+<h2>OPTIMIZE</h2>
+<% unless @optimize.empty? %>
+  <% for file in @optimize.keys %>
+    <div>
+      <p><%= file %></p>
+      <ul>
+        <% for annotation in @optimize[file] %>
+          <li><%= annotation.to_s(:indent => 0) %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% else %>
+  <p>There are not OPTIMIZE notes to show.</p>
+<% end %> 
+
+
