@@ -14,18 +14,35 @@
       
     <nav>
       <ul>
-        <li class='dropdown' ><a href='#'>Code</a>
+        <li class='dropdown'>
+          <a href='#'>Code</a>
           <ul class='dropdown-content'>
             <li>item 1</li>
             <li>item 2</li>
             <li>item 3</li>
+          </ul> 
+        </li>
+        <li class='dropdown'>
+          <a href='#'>Generators</a>
+        </li>
+        <li class='dropdown'>
+          <a href='#'>Manage</a>
+        </li>
+        <li class='dropdown'>
+          <a href='#'>Reflection</a>
+        </li>
+        <li class='dropdown'>
+          <a href='#'>Documentation</a>
+          <ul class='dropdown-content'>
+            <li><%= documentation_app %></li>
+            <li><%= documentation_rails %></li>
+            <li><%= documentation_guides%></li>
+            <li><%= link_to("Ruby Core", "http://www.ruby-doc.org/core-2.0.0/",target:"_blank") %></li>            
+            <li><%= link_to("Ruby stdlib", "http://www.ruby-doc.org/stdlib-2.0.0/",target:"_blank") %></li>
           </ul>
         </li>
-        <li class='dropdown' ><a href='#'>Generators</a></li>
-        <li class='dropdown' ><a href='#'>Manage</a></li>
-        <li class='dropdown' ><a href='#'>Reflection</a></li>
-        <li class='dropdown' ><a href='#'>Documentation</a></li>
-        <li class='dropdown' ><a href='#'>Extensions</a>
+        <li class='dropdown' >
+          <a href='#'>Extensions</a>
           <ul class='dropdown-content'>
             <li><%= tolk_link %></li>
           </ul>
