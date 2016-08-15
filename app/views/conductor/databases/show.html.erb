@@ -1,0 +1,15 @@
+<%= form_for(:database, url: database_path, method: :patch) do |f| %>
+  <p>
+    <div id="editor"></div>
+    <%= f.text_area :content %>
+  </p>
+
+  <p>
+    <%= f.submit "Save Database", class: 'submit' %>
+  </p>
+<% end %>
+
+<%= content_for :scripts do %>
+  <%= javascript_include_tag "conductor/editor" %>
+  <%= javascript_include_tag "conductor/databases" %>
+<% end %>
