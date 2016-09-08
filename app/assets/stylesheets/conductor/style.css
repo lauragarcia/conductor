@@ -71,7 +71,7 @@ footer {border-top: solid 1px #aaa;}
 }
 .dropdown-content li:hover {background-color: #cc0000;color: white;}
 .dropdown-content li:hover > a {color: white;}
-#editor { width: 100%; height: 450px; margin-top: 50px;}
+#editor { width: 100%; height: 450px;}
 .submit {
   background-color: #cc0000;
   border: none;

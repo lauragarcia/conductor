@@ -1,5 +1,4 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+//= require 'ace/mode-yaml'
 $(document).ready(function(){
   var editor = ace.edit("editor");
   var textarea = $('#database_content');
