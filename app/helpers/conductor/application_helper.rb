@@ -29,5 +29,10 @@ module Conductor
         link_to("Your App","#", data: { confirm: "rake doc:app generates documentation for your application in doc/app." })
       end
     end
+
+    def link_to_doc(text, folder)
+      url = File.join('/doc', folder, 'index.html')
+      link_to text, url
+    end
   end
 end

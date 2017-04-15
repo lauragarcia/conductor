@@ -2,12 +2,12 @@ require 'test_helper'
 
 module Conductor
   class DatabaseTest < ActiveSupport::TestCase
-    def test_database 
-      assert_match(/# SQLite version 3.x/, Database.instance.to_s)
+    def test_database
+      assert_match(/# SQLite version 3.x/, Database.instance.content)
     end
     def test_database_change
       database = Database.instance
-      content = database.to_s
+      content = database.content
       database.content = '# edit existing Database file'
       database.save
       assert_match(/# edit existing Database file/, database.content)
